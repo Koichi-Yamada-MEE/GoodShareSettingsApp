@@ -31,11 +31,6 @@
   font-size: var(--cs-text-14) ;
 }
 
-body {
-  color: #333;
-  font-family: "メイリオ", "ヒラギノ角ゴ Pro W3", "Lucida Grande", "Hiragino Kaku Gothic Pro", Osaka, Verdana, "ＭＳ Ｐゴシック", sans-serif
-}
-
 .demo-app-wrap {
   max-width: 375px;
   height: 667px;
