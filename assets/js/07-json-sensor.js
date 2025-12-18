@@ -15,7 +15,7 @@ const demoAppJson = {
       alt: 'STEP-02',
       imagePath: '../assets/img/rac/01402.png',
       tooltipTarget: 'targetArea01402',
-      tooltipDescription: '「＋機器登録を」タップする',
+      tooltipDescription: '「＋機器登録」をタップする',
       footerContent: '',
     },
     {
@@ -96,7 +96,7 @@ const demoAppJson = {
       imagePath: '../assets/img/sen/46701.png',
       tooltipTarget: 'targetArea02801',
       tooltipDescription: '環境センサーの登録が終わるまでそのまま1～2分程度待つ',
-      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02601">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li></ul>',
+      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>をご確認ください。</li></ul>',
     },
     {
       index: 12,

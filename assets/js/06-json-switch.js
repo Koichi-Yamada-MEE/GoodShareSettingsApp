@@ -15,7 +15,7 @@ const demoAppJson = {
       alt: 'STEP-02',
       imagePath: '../assets/img/rac/01402.png',
       tooltipTarget: 'targetArea01402',
-      tooltipDescription: '「＋機器登録を」タップする',
+      tooltipDescription: '「＋機器登録」をタップする',
       footerContent: '',
     },
     {
@@ -112,7 +112,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/02801.png',
       tooltipTarget: 'targetArea02801',
       tooltipDescription: '機器の登録が終わるまで2～3分程度待つ',
-      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon023">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon399">「機器の登録確認」が表示された場合</a></li></ul>',
+      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>をご確認ください。</li></ul>',
     },
     {
       index: 14,
@@ -120,7 +120,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/41001.png',
       tooltipTarget: 'targetArea41001',
       tooltipDescription: '機器の登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。',
-      footerContent: '換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>をご確認ください。',
+      footerContent: '<ul><li>換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>をご確認ください。</li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon410">機器登録後に必要な初期設定</a></li></ul>',
     },
     {
       index: 15,
@@ -168,7 +168,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/42001.png',
       tooltipTarget: 'targetArea42001',
       tooltipDescription: '登録する機器をタップする',
-      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon42001">機器が表示されない場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon025">アダプター情報を手動で入力する</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon012">機器が別のユーザーに登録されている場合</a></li></ul>',
+      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon42001">機器が表示されない場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon025">アダプター情報を手動で入力する</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">機器が別のユーザーに登録されている場合</a></li></ul>',
     },
     {
       index: 21,
@@ -176,7 +176,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/41001.png',
       tooltipTarget: 'targetArea41001-01',
       tooltipDescription: '機器の登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。',
-      footerContent: '換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>をご確認ください。',
+      footerContent: '<ul><li>換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>をご確認ください。</li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon410">機器登録後に必要な初期設定</a></li></ul>',
     },
   ],
 };
