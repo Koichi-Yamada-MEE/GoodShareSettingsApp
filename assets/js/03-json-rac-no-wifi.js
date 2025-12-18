@@ -160,7 +160,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/12201.png',
       tooltipTarget: 'targetArea06201',
       tooltipDescription: '「アプリを起動する」をタップ、霧ヶ峰アプリを起動させる',
-      footerContent: '<ul><li>エアコン登録と初期設定が完了しました。霧ヶ峰アプリの使い方については、霧ヶ峰アプリの取扱説明書をご確認ください。</li><li>エアコン名は設置されている部屋名称に変更することをお勧めします(リビングのエアコンなど)。変更方法は、取扱説明書をご確認ください。</li></ul>',
+      footerContent: '<ul><li>エアコン登録と初期設定が完了しました。霧ヶ峰アプリの使い方については、霧ヶ峰アプリの取扱説明書をご確認ください。</li><li>エアコン名は設置されている部屋名称に変更することをお勧めします(リビングのエアコンなど)。変更方法は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>をご確認ください。</li></ul>',
     },
     {
       index: 20,
@@ -240,7 +240,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/12201.png',
       tooltipTarget: 'targetArea06201-01',
       tooltipDescription: '「アプリを起動する」をタップ、霧ヶ峰アプリを起動させる',
-      footerContent: '<ul><li>エアコン登録と初期設定が完了しました。霧ヶ峰アプリの使い方については、霧ヶ峰アプリの取扱説明書をご確認ください。</li><li>エアコン名は設置されている部屋名称に変更することをお勧めします(リビングのエアコンなど)。変更方法は、取扱説明書をご確認ください。</li></ul>',
+      footerContent: '<ul><li>エアコン登録と初期設定が完了しました。霧ヶ峰アプリの使い方については、霧ヶ峰アプリの取扱説明書をご確認ください。</li><li>エアコン名は設置されている部屋名称に変更することをお勧めします(リビングのエアコンなど)。変更方法は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>をご確認ください。</li></ul>',
     },
   ],
 };
