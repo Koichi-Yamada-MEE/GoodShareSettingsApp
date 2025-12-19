@@ -32,7 +32,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/39801.png',
       tooltipTarget: 'targetArea39801',
       tooltipDescription: '機器とルーターの接続方法を選択します。<br><button type="button" class="btn btn-outline-primary mt-2 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modalCommon398">選択メニューを表示</button>',
-      footerContent: '',
+      footerContent: 'ルーターにWPS機能がない場合はアクセスポイントモードで接続、WPS機能がある場合はルーターの「WPS」ボタンを使って接続してください。',
     },
     {
       index: 4,
@@ -40,7 +40,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/39901.png',
       tooltipTarget: 'targetArea39901',
       tooltipDescription: '画面の内容を確認し、「次へ」をタップする',
-      footerContent: '',
+      footerContent: '機器、スマートフォン、ルーターを準備ください。',
     },
     {
       index: 5,

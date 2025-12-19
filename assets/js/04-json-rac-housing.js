@@ -42,7 +42,7 @@ const demoAppJson = {
       tooltipTarget: "targetArea10701",
       tooltipDescription:
         '機器とルーターの接続方法を選択します。<br><button type="button" class="btn btn-outline-primary mt-2 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modalCommon107">選択メニューを表示</button>',
-      footerContent: "",
+      footerContent: 'ルーターにWPS機能がない場合はアクセスポイントモードで接続、WPS機能がある場合はルーターの「WPS」ボタンを使って接続してください。',
     },
     {
       index: 5,
@@ -76,7 +76,7 @@ const demoAppJson = {
       tooltipTarget: "targetArea02001",
       tooltipDescription: "画面の内容を操作し、「次へ」をタップする",
       footerContent:
-        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon111">エアコンをアクセスポイント（APモード）にする</a></li></ul>',
+        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon111">エアコンをアクセスポイント（APモード）にする</a></li><li>詳しくは<a href="https://www.mitsubishielectric.co.jp/home/mymu/entry_ib_pdf.html">機器登録説明書</a>をご確認ください。</li></ul>',
     },
     {
       index: 9,

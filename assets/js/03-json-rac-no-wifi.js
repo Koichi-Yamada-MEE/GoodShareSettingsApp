@@ -48,7 +48,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/01701.png',
       tooltipTarget: 'targetArea01701',
       tooltipDescription: '機器とルーターの接続方法を選択します。<br><button type="button" class="btn btn-outline-primary mt-2 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modalCommon077">選択メニューを表示</button>',
-      footerContent: '',
+      footerContent: 'ルーターにWPS機能がない場合はアクセスポイントモードで接続、WPS機能がある場合はルーターの「WPS」ボタンを使って接続してください。',
     },
     {
       index: 6,
@@ -56,7 +56,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/07701.png',
       tooltipTarget: 'targetArea07701',
       tooltipDescription: '画面の内容を確認し、「次へ」をタップする',
-      footerContent: '',
+      footerContent: 'エアコン、スマートフォン、ルーター、無線LANアダプターを準備ください。',
     },
     {
       index: 7,

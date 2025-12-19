@@ -32,7 +32,7 @@ const demoAppJson = {
       imagePath: '../assets/img/sen/46001.png',
       tooltipTarget: 'targetArea46001',
       tooltipDescription: '画面の内容を確認し、「次へ」をタップする',
-      footerContent: '',
+      footerContent: '環境センサー、スマートフォン、ルーターを準備ください。',
     },
     {
       index: 4,
