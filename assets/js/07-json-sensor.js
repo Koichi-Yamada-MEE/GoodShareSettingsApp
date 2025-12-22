@@ -88,7 +88,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/40801.png',
       tooltipTarget: 'targetArea40801',
       tooltipDescription: '「暗号化キー（パスワード）」にルーターの暗号化キーを入力し、「接続する」をタップする',
-      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalSen011-1">「暗号化キーを表示する」</a>を選択すると、前回使用した暗号化キーを自動入力できます。</li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalSen011-2">SSIDは手動でも入力できます。</a></li></ul>',
+      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalSen011-1">「前回使用した暗号化キーを入力する」</a>を選択すると、前回使用した暗号化キーを自動入力できます。</li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalSen011-2">SSIDは手動でも入力できます。</a></li></ul>',
     },
     {
       index: 11,

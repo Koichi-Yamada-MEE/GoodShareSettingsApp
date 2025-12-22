@@ -131,7 +131,7 @@ const demoAppJson = {
       tooltipDescription:
         "ルーターの暗号化キー(パスワード)を入力、「接続する」をタップする",
       footerContent:
-        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02603">「暗号化キーを表示する」</a>を選択すると、前回使用した暗号化キーを自動入力できます。</li></ul>',
+        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02603">「前回使用した暗号化キーを入力する」</a>を選択すると、前回使用した暗号化キーを自動入力できます。</li></ul>',
     },
     {
       index: 15,

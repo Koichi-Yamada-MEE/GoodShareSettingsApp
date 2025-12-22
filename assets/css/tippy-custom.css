@@ -11,7 +11,7 @@
 .tippy-box[data-theme~='gradient'] {
   position: relative;
   background: #fff;
-  opacity: 1.0;
+  opacity: 0.8;
   border-radius: 8px;   /* ← 角丸を設定 */
   padding: 8px;
   color: #000;

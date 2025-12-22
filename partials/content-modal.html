@@ -239,7 +239,15 @@
           </li>
           <li>「閉じる」をタップすると以下の画面が表示されます。内容を確認して、再度登録手順を実施してください。「戻る」をタップすると<a href="./?slide=6">接続方法の選択画面</a>に戻ります。
           </li>
-          <li>再度接続できなかった場合は「エアコンの無線設定のリセット方法」をタップ、表示される操作方法から機器をリセットしてください。
+          <li>再度接続できなかった場合は「○○の無線設定のリセット方法」をタップ、表示される操作方法から機器をリセットしてください。
+            <!-- おしらせ -->
+            <div class="alert alert-primary p-2" role="alert">
+              <!-- <h6 class="alert-heading"><i class="bi bi-info-circle-fill pe-2 align-top"></i></h6> -->
+              <span class="mb-0" style="font-size: 0.8125rem;">
+                ○○は登録する機器によって異なります。
+              </span>
+            </div>
+
             <img class="d-block mx-auto border rounded-2 cs-modal-img-width-sm" src="../assets/img/rac/029S01.png">
           </li>
         </ul>
@@ -316,7 +324,7 @@
       </div>
       <div class="modal-body">
         <h6>エアコンとルーターをWPS接続できたか、室内機で確認する</h6>
-        <ol>
+        <ul>
           <li>室内機のランプが5秒間点灯し、“ ピーッ”と音が鳴ることを確認します。
             <div class="d-flex justify-content-center pe-3 my-3">
               <figure class="figure my-0">
@@ -329,7 +337,7 @@
             <li>接続完了です。サーバーとの初期通信が自動的に始まります。</li>
             <li>“ ピーッ、ピーッ、 ピーッ、ピーッ、ピーッ”と音が5回鳴る場合は接続に失敗しています。</li>
           </ul>
-        </ol>
+        </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -716,7 +724,7 @@
 </div>
 
 <!-- modalCommon023 -->
-<div class="modal fade" id="modalCommon023" tabindex="-1">
+<!-- <div class="modal fade" id="modalCommon023" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -739,7 +747,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <!-- modalCommon024 -->
 <div class="modal fade" id="modalCommon024" tabindex="-1">
