@@ -1,0 +1,46 @@
+/* .tippy-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #1FA28D;
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(to left, #ED701E 0%, #FFC000 33%, #60C4B4 66%, #1E8CE6 100%) 1;
+  padding: 0.5em 1.0em;
+} */
+
+/* Tippy 全体のスタイル */
+.tippy-box[data-theme~='gradient'] {
+  position: relative;
+  background: #fff;
+  opacity: 0.9;
+  border-radius: 8px;   /* ← 角丸を設定 */
+  padding: 8px;
+  color: #000;
+  font-size: 1em;
+  z-index: 0; /* 擬似要素が後ろに行くようにする */
+}
+
+.tippy-box[data-theme~='gradient']::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px; /* 本体と同じ半径にする */
+  padding: 2px; /* 枠の太さ */
+  background: linear-gradient(
+    to left,
+    #ED701E 0%,
+    #FFC000 33%,
+    #60C4B4 66%,
+    #1E8CE6 100%
+  );
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+/* 矢印の背景色変更 */
+.tippy-box[data-theme~='gradient'] > .tippy-arrow::before {
+  color: #1E8CE6; /* 吹き出し背景に合わせる */
+}
+

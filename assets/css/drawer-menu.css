@@ -1,0 +1,125 @@
+/* ハンバーガーアイコン */
+.hamburger-icon {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  font-size: 28px;
+  cursor: pointer;
+  background-color: DimGray;
+  color: white;
+  opacity: 0.7;
+  padding: 0.25em;
+  z-index: 1000;
+}
+
+/* ドロワーメニュー */
+.offcanvas.offcanvas-start {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px !important;
+  height: 100%;
+}
+
+.btn-toggle {
+  padding: .25rem .5rem;
+  font-weight: 400;
+  color: var(--bs-emphasis-color);
+  background-color: transparent;
+}
+
+.btn-toggle:hover,
+.btn-toggle:focus {
+  color: rgba(var(--bs-emphasis-color-rgb), .85);
+  background-color: var(--bs-tertiary-bg);
+}
+
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(var(--bs-emphasis-color-rgb), .85);
+}
+
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+}
+
+/* .btn-toggle-nav a:hover,
+    .btn-toggle-nav a:focus {
+      background-color: var(--bs-tertiary-bg);
+    } */
+
+/* custom styles */
+.border-bottom-gradient {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.border-bottom-gradient::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  /* ボーダーの太さ */
+  background: linear-gradient(to left,
+      #ED701E 0%,
+      #FFC000 33%,
+      #60C4B4 66%,
+      #1E8CE6 100%);
+  border-radius: 8px;
+  /* ボーダーの角を丸くする */
+}
+
+/* styles.css */
+
+.drawermenu-container {
+  padding: 0;
+}
+
+.drawermenu-container .btn,
+.drawermenu-container .btn-toggle-nav a {
+  font-size: 0.8rem;
+}
+
+.drawermenu-container ul {
+  margin-top: 0;
+}
+
+.drawermenu-container li {
+  margin-bottom: 0;
+}
+
+.btn-close {
+  width: 0.75em;
+  height: 0.75em;
+  background-size: 0.75em;
+}
+
+/* Drawer Menu */
+.offcanvas.offcanvas-start {
+  position: absolute;
+}
+
+.offcanvas-title{
+  font-size: 1.0rem;
+}
+
+.offcanvas-body,
+.offcanvas-body .btn,
+.offcanvas-body a {
+  font-size: 0.8rem;
+}

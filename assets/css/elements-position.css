@@ -1,0 +1,673 @@
+@charset "UTF-8";
+
+#targetArea01401,
+#targetArea01402,
+#targetArea01403,
+#targetArea01501,
+#targetArea01502,
+#targetArea01601,
+#targetArea04501,
+#targetArea01701,
+#targetArea01801,
+#targetArea01802,
+#targetArea01901,
+#targetArea02001,
+#targetArea04901,
+#targetArea02201,
+#targetArea02202,
+#targetArea05102,
+#targetArea02501,
+#targetArea02601,
+#targetArea02602,
+#targetArea02801,
+#targetArea03001,
+#targetArea03001-01,
+#targetArea03002,
+#targetArea03002-01,
+#targetArea03101,
+#targetArea03102,
+#targetArea03201,
+#targetArea03202,
+#targetArea03301,
+#targetArea06401,
+#targetArea03501,
+#targetArea03601,
+#targetArea03901,
+#targetArea04001,
+#targetArea04101,
+#targetArea04102,
+#targetArea04201,
+#targetArea04202,
+#targetArea06201,
+#targetArea06201-01,
+#targetArea07502,
+#targetArea07701,
+#targetArea07801,
+#targetArea07901,
+#targetArea08201,
+#targetArea08202,
+#targetArea08601,
+#targetArea09401,
+#targetArea09801,
+#targetArea10101,
+#targetArea10401,
+#targetArea10601,
+#targetArea10701,
+#targetArea11202,
+#targetArea39701,
+#targetArea39801,
+#targetArea39901,
+#targetArea39902,
+#targetArea40001-01,
+#targetArea40001-02
+#targetArea40001-01,
+#targetArea40001-02,
+#targetArea40101,
+#targetArea40501,
+#targetArea40701,
+#targetArea40702,
+#targetArea40801,
+#targetArea41001,
+#targetArea41101,
+#targetArea41201,
+#targetArea41801,
+#targetArea41901,
+#targetArea42001,
+#targetArea41001-01,
+#targetArea45901,
+#targetArea46001,
+#targetArea46101,
+#targetArea46102,
+#targetArea46201,
+#targetArea46501,
+#targetArea09301 {
+  position: absolute;
+  /* box-sizing: border-box; */
+  background-color: #ED701E;
+  opacity: 0.2;
+  border-radius: 5px;
+}
+#targetArea01401{
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 55px;
+}
+
+#targetArea01402{
+  top: 82px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea01403{
+  top: 175px;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+#targetArea01501{
+  top: 96px;
+  left: 0;
+  width: 100%;
+  height: 126px;
+}
+
+#targetArea01502{
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 177px;
+}
+
+#targetArea01601{
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: 127px;
+}
+
+#targetArea04501{
+  top: 96px;
+  left: 0;
+  width: 100%;
+  height: 127px;
+}
+
+#targetArea01701{
+  top: 227px;
+  left: 0;
+  width: 100%;
+  height: 592px;
+}
+
+#targetArea01801{
+  /* top: 494px;
+  left: 0;
+  width: 100%;
+  height: 40px; */
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
+
+#targetArea01802{
+  top: 462px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea01901{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea04901{
+  top: 922px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea02001{
+  top: 790px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea05102 {
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea02201{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea02202{
+  top: 563px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea02501{
+  top: 582px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea02601{
+  top: 244px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+#targetArea02602{
+  top: 448px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea02801{
+  top: 130px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03001,
+#targetArea03001-01 {
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea03002,
+#targetArea03002-01 {
+  top: 409px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03101{
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea03102{
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03201{
+  /* top: 463px;
+  left: 0;
+  width: 100%;
+  height: 40px; */
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
+
+#targetArea03202{
+  top: 447px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03301{
+  top: 790px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea06401{
+  top: 922px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea03501{
+  top: 482px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03601{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea03901{
+  top: 559px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea04001{
+  top: 177px;
+  left: 0;
+  width: 100%;
+  height: 73px;
+}
+
+#targetArea04101{
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea04102{
+  top: 409px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea04201{
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea04202{
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea07502{
+  top: 294px;
+  left: 0;
+  width: 100%;
+  height: 177px;
+}
+
+#targetArea07701 {
+  /* top: 481px; 
+  left: 0;
+  width: 100%;
+  height: 39px; */
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
+
+#targetArea07801 {
+  top: 449px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea07901 {
+  top: 820px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea08201 {
+  top: 449px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea08202 {
+  top: 449px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea08601 {
+  top: 581px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea06201,
+#targetArea06201-01 {
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea09401 {
+  top: 716px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea09801 {
+  top: 449px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea10101 {
+  top: 559px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea10401 {
+  top: 443px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea10601 {
+  top: 240px;
+  left: 0;
+  width: 100%;
+  height: 198px;
+}
+
+#targetArea10701 {
+  top: 227px;
+  left: 0;
+  width: 100%;
+  height: 592px;
+}
+
+#targetArea11202 {
+  top: 449px; 
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea39701 {
+  top: 366px; 
+  left: 0;
+  width: 100%;
+  height: 65px;
+}
+
+#targetArea39801{
+  top: 214px;
+  left: 0;
+  width: 100%;
+  height: 592px;
+}
+  
+#targetArea39901{
+  /* top: 463px;
+  left: 0;
+  width: 100%;
+  height: 40px; */
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
+
+#targetArea39902{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea40001-01 {
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea40001-02{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea40001-01 {
+  top: 433px;
+  left: 0;
+  width: 100%;
+  height: 38px;
+}
+
+#targetArea40001-02 {
+  top: 647px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea40101 {
+  top: 178px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea40501 {
+  top: 520px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea40701 {
+  top: 546px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea40702{
+  top: 244px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+#targetArea40801{
+  top: 448px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea41001{
+  top: 448px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea41101{
+  /* top: 448px;
+  left: 0;
+  width: 100%;
+  height: 39px; */
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
+
+#targetArea41201{
+  top: 161px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea41801 {
+  top: 492px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea41901 {
+  top: 542px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea42001 {
+  top: 177px;
+  left: 0;
+  width: 100%;
+  height: 73px;
+}
+
+#targetArea41001-01{
+  top: 448px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea45901{
+  top: 772px;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+
+#targetArea45901{
+  top: 772px;
+  left: 0;
+  width: 100%;
+  height: 64px;
+}
+
+#targetArea46001{
+  top: 449px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea46101 {
+  top: 398px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea46102 {
+  top: 476px;
+  left: 0;
+  width: 100%;
+  height: 35px;
+}
+
+#targetArea46201 {
+  top: 725px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+
+#targetArea46501 {
+  top: 546px;
+  left: 0;
+  width: 100%;
+  height: 39px;
+}
+
+#targetArea09301 {
+  /* top: 463px;
+  left: 0;
+  width: 100%;
+  height: 39px; */
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  width: auto;
+  height: auto;
+}
