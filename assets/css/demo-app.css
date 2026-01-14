@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-  --cs-app-width: 375px;
+  --cs-app-width: 500px;
   --cs-modal-width: 300px;
   --cs-modal-img-width-md: 240px;  /* 80% of modal width */
   --cs-modal-img-width-sm: 180px;  /* 60% of modal width */
@@ -121,4 +121,35 @@ footer .footer-link {
   user-select: none;
   -webkit-user-drag: none;
   touch-action: none;
+}
+
+#imageModal h1 {
+  background: linear-gradient(to right, #ED701E, #FFC000, #60C4B4, #1E8CE6);
+  background-size: 100% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%; /* テキストの下に配置 */
+}
+
+
+
+
+
+/* アプリ全体 */
+.app-wrapper {
+  width: 100%;
+  max-width: 820px;      /* タブレット最大幅 */
+  height: 100dvh;        /* 基本は画面いっぱい */
+  max-height: 1180px;    /* ★ タブレット高さで上限 */
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* main / footer 分割 */
+.app-main {
+  flex: 0 0 80%;
+  min-height: 0;               /* 内部スクロール対策 */
+}
+
+.app-footer {
+  flex: 0 0 20%;
 }

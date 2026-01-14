@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#targetArea01401,
+/* #targetArea01401, */
 #targetArea01402,
 #targetArea01403,
 #targetArea01501,
@@ -90,8 +90,8 @@
 #targetArea01401{
   top: 0;
   left: 0;
-  width: 60px;
-  height: 55px;
+  width: 20%;
+  height: 10%;
 }
 
 #targetArea01402{

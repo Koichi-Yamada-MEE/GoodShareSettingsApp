@@ -97,7 +97,8 @@ const demoAppJson = {
       imagePath: '../assets/img/sen/46701.png',
       tooltipTarget: 'targetArea02801',
       tooltipDescription: '環境センサーの登録が終わるまでそのまま1～2分程度待つ',
-      footerContent: '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>を確認ください（ユーザー種別が「管理者」のみ行えます）。</li><li>機器を工場出荷時の状態に戻す場合は機器の取扱説明書を確認ください。</li></ul>',
+      footerContent:
+        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>を確認ください（ユーザー種別が「管理者」のみ行えます）。</li><li>機器を工場出荷時の状態に戻す場合は<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/searchProduct.do?ccd=104010">エアコン</a>、<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/displayProduct.do?pid=318322&ccd=1040128812">スマートスイッチ</a>、<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/displayProduct.do?pid=318325&ccd=1040128814">環境センサー</a>の取扱説明書を確認ください。</li></ul>',
     },
     {
       index: 12,

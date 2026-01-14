@@ -41,7 +41,7 @@ const demoAppJson = {
       alt: 'STEP-05',
       imagePath: '../assets/img/switch/39901.png',
       tooltipTarget: 'targetArea39901',
-      tooltipDescription: '<h6>APモードでの接続</h6>ここからは、機器のAPモード（アクセスポイントモード）を使った機器とルーターの接続方法を説明します。画面の内容を確認し、次へ進んでください。<br /><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      tooltipDescription: '<h6>アクセスポイントモードでの接続</h6>ここからは、機器のアクセスポイントモードを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=15">WPS機能での接続</a></li><li><a href="./?slide=19">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
       footerContent:
        '機器、スマートフォン、ルーター、ルーターのSSID（2.4GHz）、ルーターに接続する暗号化キー（パスワード）を準備ください。',
     },
@@ -129,7 +129,7 @@ const demoAppJson = {
       tooltipTarget: 'targetArea02801',
       tooltipDescription: '機器の登録が終わるまで2～3分程度待つ',
       footerContent:
-        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>を確認ください（ユーザー種別が「管理者」のみ行えます）。</li><li>機器を工場出荷時の状態に戻す場合は機器の取扱説明書を確認ください。</li></ul>',
+        '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02801">機器の登録に失敗した場合</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon02802">「機器の登録確認」が表示された場合</a></li><li>登録された機器を削除する場合は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>を確認ください（ユーザー種別が「管理者」のみ行えます）。</li><li>機器を工場出荷時の状態に戻す場合は<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/searchProduct.do?ccd=104010">エアコン</a>、<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/displayProduct.do?pid=318322&ccd=1040128812">スマートスイッチ</a>、<a href="https://www.mitsubishielectric.co.jp/ldg/wink/ssl/displayProduct.do?pid=318325&ccd=1040128814">環境センサー</a>の取扱説明書を確認ください。</li></ul>',
     },
     {
       index: 14,
@@ -146,7 +146,7 @@ const demoAppJson = {
       alt: 'STEP-16',
       imagePath: '../assets/img/switch/41101.png',
       tooltipTarget: 'targetArea41101',
-      tooltipDescription: '<h6>WPS機能での接続</h6>ここからは、ルーターの「WPS」ボタンを使った機器とルーターの接続方法を説明します。画面の内容を確認し、次へ進んでください。<br /><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      tooltipDescription: '<h6>WPS機能での接続</h6>ここからは、ルーターの「WPS」ボタンを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=4">アクセスポイントモードでの接続</a></li><li><a href="./?slide=19">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
       footerContent: '',
     },
     {
@@ -183,8 +183,7 @@ const demoAppJson = {
       alt: 'STEP-20',
       imagePath: '../assets/img/switch/41901.png',
       tooltipTarget: 'targetArea41901',
-      tooltipDescription:
-        'WPS機能で機器とルーターを接続後、「次へ」をタップする',
+      tooltipDescription: '<h6>機器とルーターを接続済み</h6>ここからは、すでに機器とルーターが接続済みの場合について説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=4">アクセスポイントモードでの接続</a></li><li><a href="./?slide=15">WPS機能での接続</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
       footerContent:
         '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03901">スマートフォンの接続先を確認する</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03902">「"MyMU"がローカルネットワーク上のデバイスの検索および接続を求めています」</a>と表示されたら</li></ul>',
     },

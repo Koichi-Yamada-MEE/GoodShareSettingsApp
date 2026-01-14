@@ -27,48 +27,46 @@
   <link rel="stylesheet" href="../assets/css/tippy-custom.css" />
 </head>
 
-<body>
-  <div class="mx-auto position-relative" style="max-width: 375px;">
-    <div class="container-fluid px-0">
-      <main class="" style="height: 534px;">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Slider wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides(create slides) -->
-          </div>
-          <!-- pagination -->
-          <div class="swiper-pagination"></div>
-          <!-- navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+<body class="h-100">
+  <div class="app-wrapper w-100 d-flex flex-column mx-auto position-relative">
+    <main class="app-main">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Slider wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides(create slides) -->
         </div>
-      </main>
-      <!-- footer -->
-      <footer class="border border-success-subtle overflow-y-auto" style="height: 153px;">
-        <div class="container-fluid d-flex align-items-stretch px-3 py-2 description" style="text-align: justify;">
-          <!-- create footer content -->
-          <div id="footerContent" class=""></div>
-        </div>
-      </footer>
-  
-      <!-- Drawer menu icon -->
-      <button type="button" class="z-1 floating-menu-icon" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDrawerMenu"
-          aria-controls="offcanvasDrawerMenu" aria-label="メニューを開く">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-bar-right"
-            viewBox="0 0 16 16">
-            <path fill-rule="evenodd"
-              d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5" />
-          </svg>
-        </button>
-      <!-- Drawer menu -->
-      <!-- <div class="drawer-menu"></div> -->
-  
-      <!-- create content modal -->
-      <div class="content-modal"></div>
-      <!-- create drawer menu -->
-      <div class="drawer-menu"></div>
-    </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="border border-success-subtle app-footer overflow-y-auto">
+      <div class="container-fluid d-flex align-items-stretch px-3 py-2 description" style="text-align: justify;">
+        <!-- create footer content -->
+        <div id="footerContent" class=""></div>
+      </div>
+    </footer>
+
+    <!-- Drawer menu icon -->
+    <button type="button" class="z-1 floating-menu-icon" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDrawerMenu" aria-controls="offcanvasDrawerMenu" aria-label="メニューを開く">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-bar-right"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5" />
+      </svg>
+    </button>
+    <!-- Drawer menu -->
+    <!-- <div class="drawer-menu"></div> -->
+
+    <!-- create content modal -->
+    <div class="content-modal"></div>
+    <!-- create drawer menu -->
+    <div class="drawer-menu"></div>
   </div>
 
   <!-- Bootstrap -->
@@ -93,9 +91,9 @@
           const slide = document.createElement('div');
           slide.className = 'swiper-slide';
           slide.innerHTML = `
-        <div class="swiper-slide_img_holder">
-          <img src="${demoAppJson.slides[i].imagePath}" alt="${demoAppJson.slides[i].alt}" />
-          <div id="${demoAppJson.slides[i].tooltipTarget}"></div>
+        <div class="swiper-slide_img_holder ">
+          <img class="position-relative" src="${demoAppJson.slides[i].imagePath}" alt="${demoAppJson.slides[i].alt}" />
+          <div class="position-absolute" id="${demoAppJson.slides[i].tooltipTarget}"></div>
         </div>
       `;
           wrapper.appendChild(slide);
@@ -134,7 +132,7 @@
             hideOnClick: false,
             interactive: true,
             theme: 'gradient',
-            maxWidth: 300, // px
+            maxWidth: "100%", // px
             appendTo: () => document.querySelector('.swiper'),
           })
         );
@@ -168,6 +166,7 @@
         if (activeTooltip) {
           // tippyのポッパー内を探す（存在しない可能性があるので optional chaining を利用）
           const closeBtn = activeTooltip.popper?.querySelector('.tippy-close-btn');
+
           // ボタンがあり、まだイベントをバインドしていなければバインドする
           if (closeBtn && !closeBtn.dataset.closeBound) {
             closeBtn.addEventListener('click', () => {
