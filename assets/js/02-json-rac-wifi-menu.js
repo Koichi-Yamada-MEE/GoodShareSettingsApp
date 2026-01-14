@@ -60,7 +60,7 @@ const demoAppJson = {
       tooltipDescription:
         '機器とルーターの接続方法を選択します。<br><button type="button" class="btn btn-outline-primary mt-2 d-block mx-auto" data-bs-toggle="modal" data-bs-target="#modalCommon017">選択メニューを表示</button>',
       footerContent:
-        'ルーターにWPS機能がない場合はアクセスポイントモードで接続、WPS機能がある場合はルーターの「WPS」ボタンを使って接続してください。<span class="fw-medium text-danger">WPS機能がない場合はWPSによる接続はできません。</span>',
+        'ルーターにWPS機能がない場合はアクセスポイントモードで接続、WPS機能がある場合はルーターの「WPS」ボタンを使って接続してください。',
     },
     {
       index: 7,
