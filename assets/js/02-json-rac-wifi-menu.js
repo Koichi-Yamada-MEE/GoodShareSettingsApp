@@ -47,7 +47,7 @@ const demoAppJson = {
       index: 5,
       alt: 'STEP-06',
       imagePath: '../assets/img/rac/01601.png',
-      tooltipTarget: 'targetArea04501',
+      tooltipTarget: 'targetArea01601',
       tooltipDescription: '「リモコンにメニューボタンがある」をタップする',
       footerContent:
         '<ul><li>リモコンにメニューボタンがない場合はやり直してください。</li></ul>',
@@ -68,6 +68,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/01801.png',
       tooltipTarget: 'targetArea01801',
       tooltipDescription: '<h6>アクセスポイントモードでの接続</h6>ここからは、機器のアクセスポイントモードを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=21">WPS機能での接続</a></li><li><a href="./?slide=26">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent:
         '事前に以下の準備をしてください。<i class="bi bi-1-circle"></i>接続したいルーターのSSID(2.4GHz)、<i class="bi bi-2-circle"></i>ルーターに接続する暗号化キー(パスワード)',
     },
@@ -196,6 +197,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/03201.png',
       tooltipTarget: 'targetArea03201',
       tooltipDescription: '<h6>WPS機能での接続</h6>ここからは、ルーターの「WPS」ボタンを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=7">アクセスポイントモードでの接続</a></li><li><a href="./?slide=26">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent: 'ここからは、WPS機能で接続する手順を説明します。',
     },
     {
@@ -240,6 +242,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/03901.png',
       tooltipTarget: 'targetArea03901',
       tooltipDescription: '<h6>機器とルーターを接続済み</h6>ここからは、すでに機器とルーターが接続済みの場合について説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=7">アクセスポイントモードでの接続</a></li><li><a href="./?slide=21">WPS機能での接続</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent:
         '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03901">スマートフォンの接続先を確認する</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03902">「"MyMU"がローカルネットワーク上のデバイスの検索および接続を求めています」</a>と表示されたら</li></ul>',
     },
@@ -276,7 +279,7 @@ const demoAppJson = {
       imagePath: '../assets/img/rac/03101.png',
       tooltipTarget: 'targetArea06201-01',
       tooltipDescription:
-        '「アプリを起動する」をタップ、霧ヶ峰アプリを起動させる',
+        '「アプリを起動する」をタップ、霧ヶ峰アプリを起動させる<div class="d-flex justify-content-center mt-3"><a role="button" href="../" class="btn btn-outline-secondary d-flex justify-content-between gap-2"><i class="bi bi-chevron-left"></i>機器選択画面に戻る</a></div>',
       footerContent:
         '<ul><li>エアコン登録と初期設定が完了しました。霧ヶ峰アプリの使い方については、霧ヶ峰アプリの取扱説明書を確認ください。</li><li>エアコン名は設置されている部屋名称に変更することをお勧めします(リビングのエアコンなど)。変更方法は<a href="https://www.mitsubishielectric.co.jp/home/mymu/ib.html">MyMUアプリの取扱説明書</a>から、「登録機器一覧を確認する」の事項を確認ください（ユーザー種別が「管理者」のみ行えます）。</li></ul>',
     },

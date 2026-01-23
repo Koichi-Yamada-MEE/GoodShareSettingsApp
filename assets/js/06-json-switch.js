@@ -42,6 +42,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/39901.png',
       tooltipTarget: 'targetArea39901',
       tooltipDescription: '<h6>アクセスポイントモードでの接続</h6>ここからは、機器のアクセスポイントモードを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=15">WPS機能での接続</a></li><li><a href="./?slide=19">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent:
        '機器、スマートフォン、ルーター、ルーターのSSID（2.4GHz）、ルーターに接続する暗号化キー（パスワード）を準備ください。',
     },
@@ -147,6 +148,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/41101.png',
       tooltipTarget: 'targetArea41101',
       tooltipDescription: '<h6>WPS機能での接続</h6>ここからは、ルーターの「WPS」ボタンを使った機器とルーターの接続方法を説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=4">アクセスポイントモードでの接続</a></li><li><a href="./?slide=19">機器とルーターを接続済み</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent: '',
     },
     {
@@ -184,6 +186,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/41901.png',
       tooltipTarget: 'targetArea41901',
       tooltipDescription: '<h6>機器とルーターを接続済み</h6>ここからは、すでに機器とルーターが接続済みの場合について説明します。画面の内容を確認し次へ進む、その他の接続方法は以下から選択ください。<ul class="mt-3"><li><a href="./?slide=4">アクセスポイントモードでの接続</a></li><li><a href="./?slide=15">WPS機能での接続</a></li></ul><div class="d-flex justify-content-end"><button type="button" class="btn btn-secondary btn-sm tippy-close-btn">閉じる</button></div>',
+      noArrow: true,
       footerContent:
         '<ul><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03901">スマートフォンの接続先を確認する</a></li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon03902">「"MyMU"がローカルネットワーク上のデバイスの検索および接続を求めています」</a>と表示されたら</li></ul>',
     },
@@ -202,7 +205,7 @@ const demoAppJson = {
       imagePath: '../assets/img/switch/41001.png',
       tooltipTarget: 'targetArea41001-01',
       tooltipDescription:
-        '機器の登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。',
+        '機器の登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。<div class="d-flex justify-content-center mt-3"><a role="button" href="../" class="btn btn-outline-secondary d-flex justify-content-between gap-2"><i class="bi bi-chevron-left"></i>機器選択画面に戻る</a></div>',
       footerContent:
         '<ul><li>換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>を確認ください。</li><li><a class="footer-link" data-bs-toggle="modal" data-bs-target="#modalCommon410">機器登録後に必要な初期設定</a></li></ul>',
     },

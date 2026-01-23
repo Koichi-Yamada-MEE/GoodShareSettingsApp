@@ -1,8 +1,8 @@
 /* ハンバーガーアイコン */
-.hamburger-icon {
+/* .hamburger-icon {
   position: absolute;
   top: 16px;
-  left: 16px;
+  left: 10%;
   font-size: 28px;
   cursor: pointer;
   background-color: DimGray;
@@ -10,16 +10,15 @@
   opacity: 0.7;
   padding: 0.25em;
   z-index: 1000;
-}
+} */
 
 /* ドロワーメニュー */
 .offcanvas.offcanvas-start {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 320px !important;
-  height: 100%;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
 }
+
 
 .btn-toggle {
   padding: .25rem .5rem;
@@ -56,11 +55,6 @@
   margin-left: 1.25rem;
 }
 
-/* .btn-toggle-nav a:hover,
-    .btn-toggle-nav a:focus {
-      background-color: var(--bs-tertiary-bg);
-    } */
-
 /* custom styles */
 .border-bottom-gradient {
   position: relative;
@@ -92,7 +86,7 @@
 
 .drawermenu-container .btn,
 .drawermenu-container .btn-toggle-nav a {
-  font-size: 0.8rem;
+  font-size: 1.0rem;
 }
 
 .drawermenu-container ul {
@@ -118,8 +112,3 @@
   font-size: 1.0rem;
 }
 
-.offcanvas-body,
-.offcanvas-body .btn,
-.offcanvas-body a {
-  font-size: 0.8rem;
-}

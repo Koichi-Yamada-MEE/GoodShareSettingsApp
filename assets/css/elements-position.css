@@ -6,9 +6,9 @@
 #targetArea01501,
 #targetArea01502,
 #targetArea01601,
-#targetArea04501,
+/* #targetArea04501, */
 #targetArea01701,
-#targetArea01801,
+/* #targetArea01801, */
 #targetArea01802,
 #targetArea01901,
 #targetArea02001,
@@ -26,13 +26,13 @@
 #targetArea03002-01,
 #targetArea03101,
 #targetArea03102,
-#targetArea03201,
+/* #targetArea03201, */
 #targetArea03202,
 #targetArea03301,
 #targetArea06401,
 #targetArea03501,
 #targetArea03601,
-#targetArea03901,
+/* #targetArea03901, */
 #targetArea04001,
 #targetArea04101,
 #targetArea04102,
@@ -41,7 +41,7 @@
 #targetArea06201,
 #targetArea06201-01,
 #targetArea07502,
-#targetArea07701,
+/* #targetArea07701, */
 #targetArea07801,
 #targetArea07901,
 #targetArea08201,
@@ -49,17 +49,15 @@
 #targetArea08601,
 #targetArea09401,
 #targetArea09801,
-#targetArea10101,
+/* #targetArea10101, */
 #targetArea10401,
 #targetArea10601,
 #targetArea10701,
 #targetArea11202,
 #targetArea39701,
 #targetArea39801,
-#targetArea39901,
+/* #targetArea39901, */
 #targetArea39902,
-#targetArea40001-01,
-#targetArea40001-02
 #targetArea40001-01,
 #targetArea40001-02,
 #targetArea40101,
@@ -68,10 +66,10 @@
 #targetArea40702,
 #targetArea40801,
 #targetArea41001,
-#targetArea41101,
+/* #targetArea41101, */
 #targetArea41201,
 #targetArea41801,
-#targetArea41901,
+/* #targetArea41901, */
 #targetArea42001,
 #targetArea41001-01,
 #targetArea45901,
@@ -79,9 +77,9 @@
 #targetArea46101,
 #targetArea46102,
 #targetArea46201,
-#targetArea46501,
-#targetArea09301 {
-  position: absolute;
+#targetArea46501
+/* #targetArea09301 */
+ {
   /* box-sizing: border-box; */
   background-color: #ED701E;
   opacity: 0.2;
@@ -128,12 +126,12 @@
   height: 23.8%;
 }
 
-#targetArea04501{
+/* #targetArea04501{
   top: 96px;
   left: 0;
   width: 100%;
   height: 127px;
-}
+} */
 
 #targetArea01701{
   top: 26%;
@@ -143,15 +141,10 @@
 }
 
 #targetArea01801{
-  /* top: 494px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 40px; */
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 45%;
 }
 
 #targetArea01802{
@@ -169,10 +162,10 @@
 }
 
 #targetArea04901{
-  top: 922px;
+  top: 92.9%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 4%;
 }
 
 #targetArea02001{
@@ -183,10 +176,10 @@
 }
 
 #targetArea05102 {
-  top: 449px;
+  top: 86.3%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea02201{
@@ -262,15 +255,10 @@
 }
 
 #targetArea03201{
-  /* top: 463px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 40px; */
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 45%;
 }
 
 #targetArea03202{
@@ -288,10 +276,10 @@
 }
 
 #targetArea06401{
-  top: 922px;
+  top: 92.8%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 4%;
 }
 
 #targetArea03501{
@@ -309,10 +297,10 @@
 }
 
 #targetArea03901{
-  top: 88.7%;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 6.3%;
+  height: 40.4%;
 }
   
 #targetArea04001{
@@ -351,323 +339,282 @@
 }
 
 #targetArea07502{
-  top: 294px;
+  top: 56.4%;
   left: 0;
   width: 100%;
-  height: 177px;
+  height: 34.1%;
 }
 
 #targetArea07701 {
-  /* top: 481px; 
+  top: 0;
   left: 0;
   width: 100%;
-  height: 39px; */
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 43.9%;
 }
 
 #targetArea07801 {
-  top: 449px; 
+  top: 86.3%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea07901 {
-  top: 820px; 
+  top: 91.9%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 4.5%;
 }
 
 #targetArea08201 {
-  top: 449px; 
+  top: 86.1%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea08202 {
-  top: 449px; 
+  top: 86.1%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea08601 {
-  top: 581px; 
+  top: 89.0%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.1%;
 }
 
 #targetArea06201,
 #targetArea06201-01 {
-  top: 443px;
+  top: 85.9%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.8%;
 }
 
 #targetArea09401 {
-  top: 716px; 
+  top: 90.9%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 5.1%;
 }
 
 #targetArea09801 {
-  top: 449px; 
+  top: 86.5%; 
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea10101 {
-  top: 559px; 
+  top: 0;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 40%;
 }
 
-#targetArea10401 {
+/* #targetArea10401 {
   top: 443px;
   left: 0;
   width: 100%;
   height: 39px;
-}
+} */
 
-#targetArea10601 {
+/* #targetArea10601 {
   top: 240px;
   left: 0;
   width: 100%;
   height: 198px;
-}
+} */
 
-#targetArea10701 {
+/* #targetArea10701 {
   top: 227px;
   left: 0;
   width: 100%;
   height: 592px;
-}
+} */
 
-#targetArea11202 {
+/* #targetArea11202 {
   top: 449px; 
   left: 0;
   width: 100%;
   height: 39px;
-}
+} */
 
 #targetArea39701 {
-  top: 366px; 
+  top: 68.6%; 
   left: 0;
   width: 100%;
-  height: 65px;
+  height: 12.1%;
 }
 
 #targetArea39801{
-  top: 214px;
+  top: 25%;
   left: 0;
   width: 100%;
-  height: 592px;
+  height: 69.8%;
 }
   
 #targetArea39901{
-  /* top: 463px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 40px; */
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 47.6%;
 }
 
 #targetArea39902{
-  top: 449px;
+  top: 86.1%;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 7.7%;
 }
 
 #targetArea40001-01 {
-  top: 449px;
+  top: 60.2%;
   left: 0;
   width: 100%;
-  height: 40px;
+    height: 5.6%;
 }
 
 #targetArea40001-02{
-  top: 449px;
+  top: 90%;
   left: 0;
   width: 100%;
-  height: 40px;
-}
-
-#targetArea40001-01 {
-  top: 433px;
-  left: 0;
-  width: 100%;
-  height: 38px;
-}
-
-#targetArea40001-02 {
-  top: 647px;
-  left: 0;
-  width: 100%;
-  height: 39px;
+  height: 5.6%;
 }
 
 #targetArea40101 {
-  top: 178px;
+  top: 30.2%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.8%;
 }
 
 #targetArea40501 {
-  top: 520px;
+  top: 87.8%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.8%;
 }
 
 #targetArea40701 {
-  top: 546px;
+  top: 88.4%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.5%;
 }
 
 #targetArea40702{
-  top: 244px;
+  top: 47%;
   left: 0;
   width: 100%;
-  height: 35px;
+  height: 7%;
 }
 
 #targetArea40801{
-  top: 448px;
+  top: 86.2%;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 7.7%;
 }
 
 #targetArea41001{
-  top: 448px;
+  top: 86.6%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.8%
 }
 
 #targetArea41101{
-  /* top: 448px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 39px; */
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 48.9%;
 }
 
 #targetArea41201{
-  top: 161px;
+  top: 27.6%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.8%;
 }
 
 #targetArea41801 {
-  top: 492px;
+  top: 84.7%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.8%;
 }
 
 #targetArea41901 {
-  top: 542px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 41.5%;
 }
 
 #targetArea42001 {
-  top: 177px;
+  top: 33.9%;
   left: 0;
   width: 100%;
-  height: 73px;
+  height: 14.1%;
 }
 
 #targetArea41001-01{
-  top: 448px;
+  top: 86.6%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.8%;
 }
 
 #targetArea45901{
-  top: 772px;
+  top: 81.5%;
   left: 0;
   width: 100%;
-  height: 64px;
-}
-
-#targetArea45901{
-  top: 772px;
-  left: 0;
-  width: 100%;
-  height: 64px;
+  height: 6.8%;
 }
 
 #targetArea46001{
-  top: 449px;
+  top: 86.3%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 7.7%;
 }
 
 #targetArea46101 {
-  top: 398px;
+  top: 65.3%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.6%;
 }
 
 #targetArea46102 {
-  top: 476px;
+  top: 88.2%;
   left: 0;
   width: 100%;
-  height: 35px;
+  height: 6.2%;
 }
 
 #targetArea46201 {
-  top: 725px;
+  top: 91%;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 5%;
 }
 
 #targetArea46501 {
-  top: 546px;
+  top: 88.4%;
   left: 0;
   width: 100%;
-  height: 39px;
+  height: 6.5%;
 }
 
 #targetArea09301 {
-  /* top: 463px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 39px; */
-  top: 35%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  width: auto;
-  height: auto;
+  height: 47.6%;
 }

@@ -105,7 +105,7 @@ const demoAppJson = {
       alt: 'STEP-13',
       imagePath: '../assets/img/sen/46801.png',
       tooltipTarget: 'targetArea03001',
-      tooltipDescription: '環境センサーの登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。',
+      tooltipDescription: '環境センサーの登録が完了しました。「 アプリを起動する」をタップすると、換気REMOTEアプリが起動します。<div class="d-flex justify-content-center mt-3"><a role="button" href="../" class="btn btn-outline-secondary d-flex justify-content-between gap-2"><i class="bi bi-chevron-left"></i>機器選択画面に戻る</a></div>',
       footerContent: '換気REMOTEアプリの使い方については、<a href="https://www.MitsubishiElectric.co.jp/ldg/ja/air/products/ventilationfan/lossnaycentral/IB/pdf/kankiremote_mymu.pdf">換気REMOTEアプリの取扱説明書</a>を確認ください。',
     },
   ],

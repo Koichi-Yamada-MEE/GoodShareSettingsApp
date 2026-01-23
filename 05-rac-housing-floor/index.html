@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>エアコン設定（無線LAN内蔵/メニューボタンなし）｜三菱電機ホームソリューション ［マルチエリア空調］ Good Share！（グッシェア）｜三菱電機</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- demoApp JSON -->
+  <script src="../assets/js/01-json-rac-wifi-no-menu.js"></script>
+
+  <!-- demoApp CSS -->
+  <link rel="stylesheet" href="../assets/css/demo-app.css">
+  <link rel="stylesheet" href="../assets/css/drawer-menu.css">
+
+  <!-- demoApp Position -->
+  <link rel="stylesheet" href="../assets/css/elements-position.css">
+
+  <!-- Bootstrap CSS/ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Swiper CSS/Custom -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/swiper-custom.css">
+  <!-- Tippy -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="../assets/css/tippy-custom.css" />
+</head>
+
+<body class="bg-light d-flex justify-content-center">
+  <div class="app-frame d-flex flex-column position-relative overflow-hidden" style="width: 810px; height: 1080px;">
+    <!-- Drawer menu icon -->
+    <button type="button" class="z-2 floating-menu-icon position-absolute" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDrawerMenu" aria-controls="offcanvasDrawerMenu" aria-label="メニューを開く"
+      style="left: 2.5%; top: 2.0%;">
+      <i class="bi bi-arrow-bar-right fs-1 lh-1"></i>
+    </button>
+    <!-- ドロワーメニュー -->
+    <div class="drawer-menu"></div>
+    <!-- メイン領域 -->
+    <main class="app-main d-block" style="height: 80%">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- create slide -->
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+    <!-- フッター領域 -->
+    <footer class="app-footer overflow-y-auto p-3" style="height: 20%">
+      <!-- create footer content -->
+      <div class="footer-content" id="footerContent" class=""></div>
+    </footer>
+  
+    <!-- モーダル -->
+    <div class="content-modal"></div>
+  
+  </div>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- demoApp -->
+  <script src="../assets/js/demo-app.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Tippy -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script>
+    const updateFooter = (index) => {
+      const footerContent = document.getElementById('footerContent');
+      footerContent.innerHTML =
+        demoAppJson.slides[index].footerContent || '';
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Create slides based on JSON data
+      const createSlides = () => {
+        const slideCount = demoAppJson.slides.length;
+        const wrapper = document.getElementsByClassName('swiper-wrapper')[0];
+        for (let i = 0; i < slideCount; i++) {
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide scrollbar-hidden'; // スクロールバーを非表示
+          slide.innerHTML = `
+          <div class="swiper-slide_holder position-relative">
+            <img src="${demoAppJson.slides[i].imagePath}" alt="${demoAppJson.slides[i].alt}" />
+            <div class="position-absolute" id="${demoAppJson.slides[i].tooltipTarget}"></div>
+          </div>
+        `;
+          wrapper.appendChild(slide);
+        }
+      };
+      // スライドを作成
+      createSlides();
+
+      // slides生成後に初期化
+      const params = new URLSearchParams(window.location.search);
+      const slideIndex = parseInt(params.get('slide')) || 0;
+
+      let tooltipsInstances = [];
+      const swiper = new Swiper('.swiper', {
+        initialSlide: slideIndex,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // tippy初期化
+        on: {
+          init() {
+            // tippy を生成
+            tooltipsInstances = demoAppJson.slides
+              .filter(slide => slide.tooltipTarget && slide.tooltipDescription)
+              .flatMap(({ tooltipTarget, tooltipDescription }) =>
+                tippy(`#${tooltipTarget}`, {
+                  content: tooltipDescription,
+                  allowHTML: true,
+                  trigger: 'manual',
+                  placement: 'bottom',
+                  hideOnClick: false,
+                  interactive: true,
+                  theme: 'gradient',
+                  maxWidth: 375, // 横幅を指定（px）
+                  arrow: !demoAppJson.slides.find(slide => slide.tooltipTarget === tooltipTarget).noArrow,
+                  appendTo: () => document.querySelector('.swiper'),
+                })
+              );
+
+            // 初期ツールチップ表示
+            const initialTooltip = tooltipsInstances[slideIndex];
+
+            requestAnimationFrame(() => {
+              initialTooltip?.show();
+              initialTooltip?.popperInstance?.update();
+            });
+          }
+        }
+      });
+
+      // 初期フッター表示
+      updateFooter(slideIndex);
+
+      // スライド切替時の処理
+      swiper.on('slideChangeTransitionEnd', () => {
+        // hide all tooltips
+        tooltipsInstances.forEach(instance => instance.hide());
+
+        // show current tooltip
+        const activeTooltip = tooltipsInstances[swiper.activeIndex];
+        activeTooltip?.show();
+
+        // 矢印のないツールチップを設定
+        const noneArrowTooltipId = [8, 22]; // ← tooltipTargetのIDを指定
+        if (activeTooltip && noneArrowTooltipId.includes(activeTooltip.id)) {
+          activeTooltip.setProps({ arrow: false });
+        }
+
+        // 閉じるボタン処理
+        if (activeTooltip) {
+          const closeBtn = activeTooltip.popper?.querySelector('.tippy-close-btn');
+          if (closeBtn && !closeBtn.dataset.closeBound) {
+            closeBtn.addEventListener('click', () => {
+              activeTooltip.hide();
+            });
+            closeBtn.dataset.closeBound = 'true';
+          }
+        }
+
+        /* ===== ツールチップ位置まで自動スクロール（下部余白考慮） ===== */
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const tooltipTargetId = demoAppJson.slides[swiper.activeIndex].tooltipTarget;
+
+        if (tooltipTargetId) {
+          const tooltipTarget = activeSlide.querySelector(`#${tooltipTargetId}`);
+
+          if (tooltipTarget) {
+            // アンカーを表示領域に入れる
+            tooltipTarget.scrollIntoView({
+              behavior: 'smooth',
+              block: 'nearest'
+            });
+
+            // 下部にはみ出る場合のみ補正
+            requestAnimationFrame(() => {
+              const slideRect = activeSlide.getBoundingClientRect();
+              const tooltipRect = activeTooltip?.popper?.getBoundingClientRect();
+
+              if (!tooltipRect) return;
+
+              const bottomPadding = 80; // 下部に確保したい余白(px)
+
+              const overflowBottom =
+                tooltipRect.bottom - slideRect.bottom + bottomPadding;
+
+              if (overflowBottom > 0) {
+                activeSlide.scrollBy({
+                  top: overflowBottom,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          }
+        }
+        /* ========================================================= */
+        updateFooter(swiper.activeIndex);
+      });
+    });
+  </script>
+</body>
+
+</html>
