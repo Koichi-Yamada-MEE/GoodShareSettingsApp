@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <title>環境センサー設定｜三菱電機ホームソリューション ［マルチエリア空調］ Good Share！（グッシェア）｜三菱電機</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- demoApp JSON -->
+  <script src="../assets/js/07-json-sensor.js"></script>
+
+  <!-- demoApp CSS -->
+  <link rel="stylesheet" href="../assets/css/demo-app.css">
+  <link rel="stylesheet" href="../assets/css/drawer-menu.css">
+
+  <!-- demoApp Position -->
+  <link rel="stylesheet" href="../assets/css/elements-position.css">
+
+  <!-- Bootstrap CSS/ICON -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Swiper CSS/Custom -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../assets/css/swiper-custom.css">
+  <!-- Tippy -->
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css" />
+  <link rel="stylesheet" href="../assets/css/tippy-custom.css" />
+</head>
+
+<body class="bg-light d-flex justify-content-center">
+  <div class="d-flex flex-column position-relative overflow-hidden vh-100">
+    <!-- Drawer menu icon -->
+    <button type="button" class="z-2 floating-menu-icon position-absolute" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasDrawerMenu" aria-controls="offcanvasDrawerMenu" aria-label="メニューを開く"
+      style="left: 2.5%; top: 2.0%;">
+      <i class="bi bi-arrow-bar-right fs-1 lh-1"></i>
+    </button>
+    <!-- ドロワーメニュー -->
+    <div class="drawer-menu"></div>
+    <!-- メイン領域 -->
+    <main class="app-main d-block" style="height: 80%">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- create slide -->
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+    <!-- フッター領域 -->
+    <footer class="app-footer overflow-y-auto p-3" style="height: 20%">
+      <!-- create footer content -->
+      <div class="footer-content" id="footerContent" class=""></div>
+    </footer>
+
+    <!-- モーダル -->
+    <div class="content-modal"></div>
+
+  </div>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <!-- demoApp -->
+  <script src="../assets/js/demo-app.js"></script>
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Tippy -->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <script src="https://unpkg.com/tippy.js@6"></script>
+
+  <script>
+    const updateFooter = (index) => {
+      const footerContent = document.getElementById('footerContent');
+      footerContent.innerHTML =
+        demoAppJson.slides[index].footerContent || '';
+    };
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Create slides based on JSON data
+      const createSlides = async () => {
+        const slideCount = demoAppJson.slides.length;
+        const wrapper = document.getElementsByClassName('swiper-wrapper')[0];
+        for (let i = 0; i < slideCount; i++) {
+          const slideConfig = demoAppJson.slides[i];
+          const slide = document.createElement('div');
+          slide.className = 'swiper-slide scrollbar-hidden'; // スクロールバーを非表示
+          const slideInnerHtml = window.buildDemoAppSlideInnerHtml
+            ? await window.buildDemoAppSlideInnerHtml(slideConfig)
+            : `
+              <img src="${slideConfig.imagePath}" alt="${slideConfig.alt}" />
+              <div class="position-absolute" id="${slideConfig.tooltipTarget}"></div>
+            `;
+          slide.innerHTML = `
+          <div class="swiper-slide_holder position-relative">
+            ${slideInnerHtml}
+          </div>
+        `;
+          wrapper.appendChild(slide);
+
+          requestAnimationFrame(() => {
+            const svgRoot = slide.querySelector('svg');
+
+            if (!svgRoot) {
+              console.warn(
+                `SVGが見つかりません: ${slideConfig.imagePath}`
+              );
+              return;
+            }
+
+            const tooltipTarget = slideConfig.tooltipTarget;
+            if (!tooltipTarget) {
+              return;
+            }
+
+            const target = svgRoot.querySelector(
+              `#${CSS.escape(tooltipTarget)}`
+            );
+
+            console.log('Overlay対象:', {
+              index: slideConfig.index,
+              imagePath: slideConfig.imagePath,
+              tooltipTarget,
+              target
+            });
+
+            if (!target) {
+              console.warn(
+                `SVG target "${tooltipTarget}" が見つかりません: ${slideConfig.imagePath}`
+              );
+              return;
+            }
+
+            addTargetOverlay(target);
+          });
+        }
+      };
+      // スライドを作成
+      await createSlides();
+
+      // slides生成後に初期化
+      const params = new URLSearchParams(window.location.search);
+      const slideIndex = parseInt(params.get('slide')) || 0;
+
+      let tooltipsInstances = [];
+      let swiper;
+      const centeredTooltipIndexes = new Set(
+        demoAppJson.slides
+          .map((slide, index) => slide.noArrow ? index : null)
+          .filter(index => index !== null)
+      );
+      const scrollTargetCenterIndexes = new Set();
+      const topPlacementTooltipIndexes = new Set();
+
+      const positionTooltipAtCenter = (tooltip) => {
+        const popper = tooltip?.popper;
+        if (!popper) {
+          return;
+        }
+
+        popper.style.setProperty('position', 'absolute', 'important');
+        popper.style.setProperty('left', '50%', 'important');
+        popper.style.setProperty('top', '50%', 'important');
+        popper.style.setProperty('right', 'auto', 'important');
+        popper.style.setProperty('bottom', 'auto', 'important');
+        popper.style.setProperty('transform', 'translate(-50%, -50%)', 'important');
+      };
+
+      const moveTooltipIntoSlideViewport = (activeSlide, tooltip) => {
+        const popper = tooltip?.popper;
+        if (!popper) {
+          return;
+        }
+
+        const slideRect = activeSlide.getBoundingClientRect();
+        const tooltipRect = popper.getBoundingClientRect();
+        const viewportPadding = 24;
+        const overflowTop = slideRect.top - tooltipRect.top + viewportPadding;
+        const overflowBottom = tooltipRect.bottom - slideRect.bottom + viewportPadding;
+        const yOffset =
+          overflowBottom > 0 ? -overflowBottom : overflowTop > 0 ? overflowTop : 0;
+
+        if (yOffset === 0) {
+          return;
+        }
+
+        const transform = popper.style.transform;
+        const translateMatch = transform.match(/translate\(([-\d.]+)px,\s*([-\d.]+)px\)/);
+        if (translateMatch) {
+          const x = Number(translateMatch[1]);
+          const y = Number(translateMatch[2]) + yOffset;
+          popper.style.setProperty('transform', `translate(${x}px, ${y}px)`, 'important');
+        } else {
+          popper.style.setProperty('transform', `${transform} translateY(${yOffset}px)`, 'important');
+        }
+      };
+
+      const createTooltipInstances = (swiperInstance) =>
+        demoAppJson.slides.map((slide, index) => {
+          const { tooltipTarget, tooltipDescription, noArrow } = slide;
+          if (!tooltipDescription) {
+            return null;
+          }
+
+          const slideElement = swiperInstance.slides[index];
+          if (!slideElement) {
+            console.warn(`Tooltip slide が見つかりません: ${slide.imagePath}`);
+            return null;
+          }
+
+          const fallbackTarget = slideElement.querySelector('.swiper-slide_holder') || slideElement;
+          let target = fallbackTarget;
+
+          if (tooltipTarget) {
+            const svgTarget = slideElement.querySelector(`#${CSS.escape(tooltipTarget)}`);
+            if (svgTarget) {
+              target = svgTarget;
+            } else if (!noArrow) {
+              console.warn(`Tooltip target "${tooltipTarget}" が見つかりません: ${slide.imagePath}`);
+            }
+          }
+
+          const isCenteredTooltip = centeredTooltipIndexes.has(index);
+          const isTopPlacementTooltip = topPlacementTooltipIndexes.has(index);
+          const tippyOptions = {
+            content: tooltipDescription,
+            allowHTML: true,
+            trigger: 'manual',
+            placement: isTopPlacementTooltip ? 'top' : 'bottom',
+            offset: isTopPlacementTooltip ? [0, 18] : [0, 10],
+            hideOnClick: false,
+            interactive: true,
+            theme: 'gradient',
+            maxWidth: 375, // 横幅を指定（px）
+            arrow: !noArrow,
+            appendTo: () => document.querySelector('.swiper'),
+            // 【追加】マウント（表示準備）が完了した瞬間に位置を更新
+            onShown(instance) {
+              const updatePromise = instance.popperInstance?.update();
+              if (isCenteredTooltip) {
+                Promise.resolve(updatePromise).then(() => {
+                  positionTooltipAtCenter(instance);
+                });
+              }
+            }
+          };
+
+          if (isCenteredTooltip) {
+            tippyOptions.popperOptions = {
+              modifiers: [
+                {
+                  name: 'centerTooltip',
+                  enabled: true,
+                  phase: 'write',
+                  fn({ state }) {
+                    positionTooltipAtCenter({ popper: state.elements.popper });
+                  }
+                }
+              ]
+            };
+          }
+
+          return tippy(target, tippyOptions);
+        });
+
+      const bindTooltipClose = (tooltip) => {
+        const closeBtn = tooltip?.popper?.querySelector('.tippy-close-btn');
+        if (closeBtn && !closeBtn.dataset.closeBound) {
+          closeBtn.addEventListener('click', () => {
+            tooltip.hide();
+          });
+          closeBtn.dataset.closeBound = 'true';
+        }
+      };
+
+      const scrollToTooltip = (index, tooltip) => {
+        if (centeredTooltipIndexes.has(index)) {
+          positionTooltipAtCenter(tooltip);
+          return;
+        }
+
+        const activeSlide = swiper.slides[index];
+        const tooltipTargetId = demoAppJson.slides[index].tooltipTarget;
+        const tooltipTarget = tooltipTargetId
+          ? activeSlide.querySelector(`#${CSS.escape(tooltipTargetId)}`) || tooltip?.reference
+          : tooltip?.reference;
+
+        if (!tooltipTarget) {
+          return;
+        }
+
+        // アンカーを表示領域に入れる
+        tooltipTarget.scrollIntoView({
+          behavior: 'smooth',
+          block: scrollTargetCenterIndexes.has(index) ? 'center' : 'nearest'
+        });
+
+        // 下部にはみ出る場合のみ補正
+        setTimeout(() => {
+          tooltip?.popperInstance?.update();
+          const slideRect = activeSlide.getBoundingClientRect();
+          const tooltipRect = tooltip?.popper?.getBoundingClientRect();
+
+          if (!tooltipRect) return;
+
+          const topPadding = 24;
+          const bottomPadding = 80; // 下部に確保したい余白(px)
+
+          const overflowTop =
+            slideRect.top - tooltipRect.top + topPadding;
+          const overflowBottom =
+            tooltipRect.bottom - slideRect.bottom + bottomPadding;
+
+          if (overflowBottom > 0 || overflowTop > 0) {
+            activeSlide.scrollBy({
+              top: overflowBottom > 0 ? overflowBottom : -overflowTop,
+              behavior: 'smooth'
+            });
+
+            setTimeout(() => {
+              tooltip?.popperInstance?.update();
+              setTimeout(() => {
+                const adjustedTooltipRect = tooltip?.popper?.getBoundingClientRect();
+                if (!adjustedTooltipRect) return;
+
+                const remainingOverflowBottom =
+                  adjustedTooltipRect.bottom - slideRect.bottom + bottomPadding;
+
+                if (remainingOverflowBottom > 0) {
+                  tooltip.setProps({
+                    offset: [0, -(remainingOverflowBottom + 8)]
+                  });
+                  tooltip.popperInstance?.update();
+                }
+              }, 50);
+            }, 350);
+          }
+
+          setTimeout(() => {
+            const updatePromise = tooltip?.popperInstance?.update();
+            Promise.resolve(updatePromise).then(() => {
+              moveTooltipIntoSlideViewport(activeSlide, tooltip);
+            });
+          }, 700);
+        }, 50);
+      };
+
+      const showTooltipForSlide = (index) => {
+        // hide all tooltips
+        tooltipsInstances.forEach(instance => instance?.hide());
+
+        // show current tooltip
+        const activeTooltip = tooltipsInstances[index];
+        activeTooltip?.show();
+        setTimeout(() => {
+          activeTooltip?.popperInstance?.update();
+          bindTooltipClose(activeTooltip);
+          scrollToTooltip(index, activeTooltip);
+        }, 0);
+      };
+
+      swiper = new Swiper('.swiper', {
+        initialSlide: slideIndex,
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        // tippy初期化
+        on: {
+          init() {
+            // tippy を生成
+            tooltipsInstances = createTooltipInstances(this);
+
+            // 初期ツールチップ表示
+            setTimeout(() => {
+              showTooltipForSlide(slideIndex);
+            }, 0);
+          }
+        }
+      });
+
+      // 初期フッター表示
+      updateFooter(slideIndex);
+
+      // スライド切替時の処理
+      swiper.on('slideChangeTransitionEnd', () => {
+        showTooltipForSlide(swiper.activeIndex);
+        updateFooter(swiper.activeIndex);
+      });
+    });
+  </script>
+</body>
+
+</html>

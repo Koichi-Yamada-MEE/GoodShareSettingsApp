@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+body {
+  font-family: "Noto Sans JP", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+:root {
+  --cs-app-width: 500px;
+  --cs-modal-width: 300px;
+  --cs-modal-img-width-md: 240px;
+  /* 80% of modal width */
+  --cs-modal-img-width-sm: 180px;
+  /* 60% of modal width */
+  --cs-modal-img-width-xs: 120px;
+  /* 40% of modal width */
+  --cs-modal-img-1: 2rem;
+  --cs-modal-img-2: 4rem;
+  --cs-text-14: 0.875rem;
+}
+
+.app-wrap {
+  max-width: var(--cs-app-width) !important;
+  margin: 0 auto;
+}
+
+.modal .modal-dialog {
+  max-width: var(--cs-modal-width) !important;
+  margin: 0 auto;
+}
+
+.modal .cs-modal-img-width-sm {
+  width: var(--cs-modal-img-width-sm);
+}
+
+.modal .cs-modal-img-width-md {
+  width: var(--cs-modal-img-width-md);
+}
+
+.modal .cs-modal-img-width-xs {
+  width: var(--cs-modal-img-width-xs);
+}
+
+.fs-7 {
+  font-size: var(--cs-text-14);
+}
+
+/* floating-menu-icon */
+.floating-menu-icon {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* footer contents */
+footer {
+  font-size: 0.875rem;
+}
+
+footer ul,
+footer ol {
+  padding-left: 1.0rem;
+}
+
+footer .footer-link,
+.tippy-content .footer-link {
+  cursor: pointer;
+}
+
+footer a,
+footer .footer-link {
+  color: #1FA28D;
+  text-decoration: underline;
+}
+
+/* Bootstrap customize */
+.modal-body>ul,
+.modal-body>ol {
+  /* list-style-type: revert; */
+  padding-left: 1.625rem;
+  /* margin-left: revert; */
+  text-align: justify;
+  word-break: break-all;
+}
+
+.modal-body>ol ul,
+.modal-body>ul ul {
+  padding-left: 0rem !important;
+}
+
+/* ネガティブマージン */
+.ms-n3 {
+  margin-left: -1rem !important;
+}
+
+.ms-n4 {
+  margin-left: -2rem !important;
+}
+
+.modal-body ol li::marker {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+/* アプリ全体 */
+.app-wrapper {
+  width: 100%;
+  max-width: 820px;
+  /* タブレット最大幅 */
+  height: 100dvh;
+  /* 基本は画面いっぱい */
+  max-height: 1180px;
+  /* ★ タブレット高さで上限 */
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* main / footer 分割 */
+.app-main {
+  flex: 0 0 80%;
+  min-height: 0;
+  /* 内部スクロール対策 */
+}
+
+.app-footer {
+  flex: 0 0 20%;
+}
+
+.app-main {
+  /* 中身が少ない場合に余白が見えるように */
+  display: block;
+}
+
+.app-footer {
+  border-top: 1px solid #dee2e6;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.swiper-slide {
+  overflow-y: auto;
+}
+
+.swiper-slide img {
+  width: 375px;
+  height: auto;
+}
+
+.swiper-slide svg {
+  width: 375px;
+  height: auto;
+  display: block;
+}
+
+/* .demo-svg-highlight-target,
+.demo-svg-highlight-target * {
+  fill: #ed701e !important;
+  stroke: #ed701e !important;
+} */
+
+.targetObj {
+  background-color: #ed701e !important;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
