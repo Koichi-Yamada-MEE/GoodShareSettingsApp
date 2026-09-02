@@ -141,17 +141,22 @@ footer .footer-link {
 
 .swiper-slide {
   overflow-y: auto;
+  box-sizing: border-box;
+  padding: 0 10%;
 }
 
 .swiper-slide img {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   height: auto;
 }
 
 .swiper-slide svg {
-  width: 375px;
+  width: 100%;
+  max-width: 375px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* .demo-svg-highlight-target,
